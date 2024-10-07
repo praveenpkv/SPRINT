@@ -1,0 +1,147 @@
+3 start
+
+program_location:programe
+jump:3
+add:1
+subtract:2
+jumpeq:4
+jumplt:5
+copy:7
+halt:9
+put:0
+tocheck:0
+one:1
+store8:0
+store11:0
+
+
+start:7 program_location pointer
+
+
+loop:7 pointer:0 tocheck
+checkjump:4 tocheck jump execjump
+checkhalt:4 tocheck halt stop
+checkadd:4 tocheck add execadd
+checksubtract:4 tocheck subtract execsubtract
+checkjumpeq:4 tocheck jumpeq execjumpeq
+checkjumplt:4 tocheck jumplt execjumplt
+checkcopy:4 tocheck copy execcopy
+checkput:4 tocheck put execput
+
+
+
+
+execjump:1 pointer one pointer
+7 pointer help1
+7 help1:0 help1
+1 program_location help1 pointer
+2 pointer one pointer
+3 loop
+
+
+
+execadd:1 pointer one pointer
+7 pointer help2
+1 pointer one pointer
+7 pointer help3
+1 pointer one pointer
+7 pointer help4 
+1 program_location help2:0 store
+2 store one store
+1 program_location help3:0 store1
+2 store1 one store1
+1 program_location help4:0 store2
+2 store2 one store2
+1 store:0 store1:0 store2:0
+1 pointer one pointer 
+3 loop
+
+
+
+execsubtract:1 pointer one pointer
+7 pointer help5
+1 pointer one pointer
+7 pointer help6
+1 pointer one pointer
+7 pointer help7 
+1 program_location help5:0 store3
+2 store3 one store3
+1 program_location help6:0 store4
+2 store4 one store4
+1 program_location help7:0 store5
+2 store5 one store5
+2 store3:0 store4:0 store5:0
+1 pointer one pointer 
+3 loop
+
+
+execjumpeq:1 pointer one pointer
+7 pointer help8
+1 pointer one pointer
+7 pointer help9
+1 pointer one pointer
+7 pointer help10
+1 program_location help8:0 store6
+2 store6 one store6
+1 program_location help9:0 store7
+2 store7 one store7
+1 program_location help10:0 store8
+2 store8 one store8
+4 store6:0 store7:0 input
+1 pointer one pointer
+3 loop
+input:7 store8 pointer
+3 loop
+
+
+execjumplt:1 pointer one pointer
+7 pointer help11
+1 pointer one pointer
+7 pointer help12
+1 pointer one pointer
+7 pointer help13
+1 program_location help11:0 store9
+2 store9 one store9
+1 program_location help12:0 store10
+2 store10 one store10
+1 program_location help13:0 store11
+2 store11 one store11
+5 store9:0 store10:0 input2
+1 pointer one pointer
+3 loop
+input2:7 store11 pointer
+3 loop
+
+
+
+execcopy:1 pointer one pointer
+7 pointer help14
+1 pointer one pointer
+7 pointer help15
+1 program_location help14:0 store12
+2 store12 one store12
+1 program_location help15:0 store13
+2 store13 one store13
+7 store12:0 store13:0
+1 pointer one pointer
+3 loop
+
+
+
+execput:1 pointer one pointer
+7 pointer help16
+1 pointer one pointer
+7 pointer help17
+1 program_location help16:0 store14
+2 store14 one store14
+1 program_location help17:0 store15
+2 store15 one store15
+7 store14:0 store15:0
+1 pointer one pointer
+3 loop
+
+
+stop:9
+
+
+programe:
