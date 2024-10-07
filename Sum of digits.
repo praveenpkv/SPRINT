@@ -1,0 +1,22 @@
+3 5 number:121
+result:0
+3 start
+copynum:0
+ten:10
+quotient:0
+one:1
+zero:0
+start:7 number copynum
+5 copynum zero ok
+3 loop
+ok:2 zero copynum copynum
+loop:5 copynum ten yes 
+2 copynum ten copynum
+1 quotient one quotient
+3 loop
+yes:1 result copynum result
+4 quotient zero halt
+7 quotient copynum
+7 zero quotient
+3 loop
+halt:9
