@@ -1,0 +1,14 @@
+3 jump
+5 0
+jump:3 10
+0 1 2 
+copy:7 3 7
+4 9 3 addeq
+checklt:5 7 9 checkeq
+2 7 9 7
+3 checklt
+checkeq:4 7 4 stop
+1 9 8 9
+3 copy
+addeq:1 4 8 4
+stop:9
