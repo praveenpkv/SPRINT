@@ -1,0 +1,25 @@
+3 5 
+first_element_location:62
+length:5
+3 start
+t1:0
+t2:0
+one:1
+store:0
+start:4 length t1 halt
+7 first_element_location t1
+1 first_element_location length store
+2 store one t2
+check:5 t1 t2 move
+halt:9
+move:7 t1 address1
+7 t2 address2
+7 t1 address3
+7 t2 address4
+7 address1:0 store
+7 address2:0 address3:0
+7 store address4:0
+1 t1 one t1
+2 t2 one t2
+3 check
+1 2 3 4 5
