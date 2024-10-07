@@ -1,0 +1,68 @@
+3 calculator
+
+
+fn:0 sn:0 result:0 zero:0 one:1 hundred:100 operation:0 copynum:0 operate:0 addition:1
+subtraction:2 multiply:10 division:11 percent:12
+
+
+calculator:6 operation
+
+
+check:4 operation addition add
+4 operation subtraction subtract
+4 operation multiply multiplication
+4 operation division divide
+4 operation percent percentage
+3 halt
+
+
+add:6 fn
+6 sn
+1 fn sn result
+3 halt
+
+
+subtract:6 fn
+6 sn
+2 fn sn result
+3 halt
+
+
+multiplication:6 fn
+6 sn
+7 sn operate
+loop:4 operate zero halt
+increase:1 fn result result
+decrease:2 operate one operate
+3 loop
+
+
+divide:6 fn
+6 sn
+7 fn copynum
+4 sn zero halt
+7 sn operate
+loop2:5 copynum operate halt
+1 result one result
+2 copynum operate copynum
+3 loop2
+
+
+percentage:6 fn
+6 sn
+7 hundred operate
+loop3:4 operate zero gofordivide
+incre:1 fn result result
+decre:2 operate one operate
+3 loop3
+gofordivide:7 result copynum
+4 sn zero halt
+7 sn operate
+7 zero result
+loop4:5 copynum operate halt
+1 result one result
+2 copynum operate copynum
+3 loop4
+
+
+halt:9
